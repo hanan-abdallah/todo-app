@@ -1,0 +1,27 @@
+node_modules/
+.env
+/tmp/
+*.log
+.env
+/dist/
+/coverage/
+# IDE specific files
+/.vscode/
+# OS generated files
+.DS_Store
+# Dependency directories
+/npm-debug.log*
+/package-lock.json
+# Miscellaneous
+/.idea/
+# Ignore test files
+/test-results/
+# Ignore temporary files
+/tmp/
+# Ignore local configuration files
+/local-config.json
+# Ignore build directories
+/build/
+# Ignore cache directories
+/cache/
+playground/
