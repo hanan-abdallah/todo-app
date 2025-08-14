@@ -5,13 +5,11 @@ const cors = require('cors');
 const todoRoutes = require('./routes/todoRoutes');
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 app.use(cors({
   origin: "https://todo-frontend-c7uz.onrender.com",
   credentials: true
 }));
-
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('API is running...');
