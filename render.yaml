@@ -1,0 +1,29 @@
+# Exported from Render on 2025-08-14T09:42:08Z
+services:
+- type: web
+  name: todo-frontend
+  runtime: static
+  repo: https://github.com/hanan-abdallah/todo-app
+  envVars:
+  - key: VITE_API_BASE
+    sync: false
+  buildCommand: npm run build
+  staticPublishPath: dist
+  autoDeployTrigger: commit
+  rootDir: client
+- type: web
+  name: todo-backend
+  runtime: node
+  repo: https://github.com/hanan-abdallah/todo-app
+  plan: free
+  envVars:
+  - key: MONGO_URI
+    sync: false
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: npm start
+  autoDeployTrigger: commit
+  rootDir: server
+version: "1"
