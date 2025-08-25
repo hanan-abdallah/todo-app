@@ -21,7 +21,7 @@ services:
     sync: false
   - key: PORT
     sync: false
-  region: oregon
+  region: frankfurt
   buildCommand: npm install
   startCommand: npm start
   autoDeployTrigger: commit
