@@ -6,13 +6,8 @@ const todoRoutes = require('./routes/todoRoutes');
 
 const app = express();
 
-const allowedOrigin =
-  process.env.NODE_ENV === 'production'
-    ? process.env.FRONTEND_URL
-    : 'http://localhost:3000'; // fallback for local dev
-
 app.use(cors({
-  origin: allowedOrigin,
+  origin: "https://todo-frontend-ixwt.onrender.com",
 }));
 
 app.use(express.json());
